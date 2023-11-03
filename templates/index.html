@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Writer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/main.css') }}">
+</head>
+<body>
+    <div id="form-container">
+        <form action="{{ url_for('generate_text_route') }}" method="post">
+            <label for="input_text">Enter your request:</label>
+            <textarea name="input_text" id="input_text"></textarea>
+            <label for="tone">Select a tone:</label>
+            <br>
+            <div id="tone-options">
+                <button type="button" name="tone" value="formal" class="tone-btn">Formal</button>
+                <br>
+                <br>
+                <button type="button" name="tone" value="informal" class="tone-btn">Informal</button>
+                <br>
+                <br>
+            </div>
+            <input type="submit" value="Generate Text">
+        </form>
+    </div>
+    <div id="generated-text-container">
+        <label for="generated_text">Generated Text:</label>
+        <textarea name="generated_text" id="generated_text" readonly></textarea>
+    </div>
+    <div id="selected-tone-container"></div>
+    <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+    "name": "AI Writer",
+    "version": "1.0.0",
+    "description": "An AI-powered writing assistant extension",
+    "manifest_version": 2,
+    "author": "Your Name or Company Name",
+    "icons": {
+        "128": "icon_128.png"
+    },
+    "browser_action": {
+        "default_popup": "index.html",
+        "default_title": "AI Writer",
+        "default_icon": "icon.png"
+    },
+    "permissions": [
+        "activeTab", 
+        "https://*/*", 
+        "http://*/*"
+    ]
+}
